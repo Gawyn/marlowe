@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604102421) do
+ActiveRecord::Schema.define(:version => 20130604162344) do
+
+  create_table "marlowe_cookie_sessions", :force => true do |t|
+    t.string   "referer"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "marlowe_tokens", :force => true do |t|
     t.string   "value"

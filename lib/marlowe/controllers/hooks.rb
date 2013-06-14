@@ -12,7 +12,7 @@ module Marlowe
 
       def set_first_referer
         referer = request.env['HTTP_REFERER']
-        session['marlowe.first_referer'] = referer
+        session['marlowe.first_referer'] ||= referer
       end
       
       def set_referer
